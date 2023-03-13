@@ -5,6 +5,7 @@ namespace Recuzählen
     class programm
     {
         public static int zahl = 0;
+        public static int altzahl = 0;
         public static int rundenzähler = 0;
         public static int repeater = 10;
 
@@ -25,6 +26,7 @@ namespace Recuzählen
             }
             else if (zahl == 0)
             {
+                altzahl = zahl;
                 zahl++;
                 rundenzähler++;
                 rezählen(repeater);
@@ -32,7 +34,9 @@ namespace Recuzählen
             }
             else if (rundenzähler != repeater)
             {
-                zahl = zahl + 1;
+                
+                zahl = zahl + altzahl;
+                altzahl = zahl - altzahl;
                 rundenzähler++;
                 rezählen(repeater);
                 return zahl;
