@@ -9,12 +9,12 @@ namespace Recuzaehlen
         { 
             
 
-            Console.WriteLine(rezaehlen(10,0,0));
+            Console.WriteLine(rezaehlen(50,0,0));
 
             
         }
 
-        static int rezaehlen(int repeater, int zahl, int altzahl)
+        static long rezaehlen(int repeater, long zahl, long altzahl)
         {
             if (repeater == 0)
             {
