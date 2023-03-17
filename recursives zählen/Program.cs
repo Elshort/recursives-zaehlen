@@ -1,45 +1,42 @@
 ﻿using System;
 
-namespace Recuzählen
+namespace Recuzaehlen
 {
     class programm
     {
-        public static int zahl = 0;
-        public static int altzahl = 0;
-        public static int rundenzähler = 0;
-        public static int repeater = 10;
 
         static void Main()
         { 
             
 
-            Console.WriteLine(rezählen(repeater));
+            Console.WriteLine(rezaehlen(10,0,0,0));
 
             
         }
 
-        static int rezählen(int repeater)
+        static int rezaehlen(int repeater, int zahl, int altzahl, int rundenzähler)
         {
             if (rundenzähler == repeater)
             {
                 return zahl;
+                
             }
             else if (zahl == 0)
             {
                 altzahl = zahl;
                 zahl++;
                 rundenzähler++;
-                rezählen(repeater);
-                return zahl;
+                rezaehlen(repeater, zahl, altzahl, rundenzähler);
+
             }
-            else if (rundenzähler != repeater)
+            else 
             {
                 
                 zahl = zahl + altzahl;
                 altzahl = zahl - altzahl;
                 rundenzähler++;
-                rezählen(repeater);
-                return zahl;
+                rezaehlen(repeater, zahl, altzahl, rundenzähler);
+
             }
             return zahl;
 
