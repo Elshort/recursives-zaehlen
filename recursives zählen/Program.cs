@@ -9,14 +9,14 @@ namespace Recuzaehlen
         { 
             
 
-            Console.WriteLine(rezaehlen(10,0,0,0));
+            Console.WriteLine(rezaehlen(10,0,0));
 
             
         }
 
-        static int rezaehlen(int repeater, int zahl, int altzahl, int rundenzähler)
+        static int rezaehlen(int repeater, int zahl, int altzahl)
         {
-            if (rundenzähler == repeater)
+            if (repeater == 0)
             {
                 return zahl;
                 
@@ -25,8 +25,8 @@ namespace Recuzaehlen
             {
                 altzahl = zahl;
                 zahl++;
-                rundenzähler++;
-                rezaehlen(repeater, zahl, altzahl, rundenzähler);
+                repeater--;
+                zahl = rezaehlen(repeater, zahl, altzahl);
 
             }
             else 
@@ -34,8 +34,8 @@ namespace Recuzaehlen
                 
                 zahl = zahl + altzahl;
                 altzahl = zahl - altzahl;
-                rundenzähler++;
-                rezaehlen(repeater, zahl, altzahl, rundenzähler);
+                repeater--;
+                zahl = rezaehlen(repeater, zahl, altzahl);
 
             }
             return zahl;
