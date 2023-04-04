@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Recuzaehlen
 {
@@ -9,12 +10,12 @@ namespace Recuzaehlen
         { 
             
 
-            Console.WriteLine(rezaehlen(50,0,0));
+            Console.WriteLine(rezaehlen(20,0));
 
             
         }
 
-        static long rezaehlen(int repeater, long zahl, long altzahl)
+        static long rezaehlen(int repeater, long zahl)
         {
             if (repeater == 0)
             {
@@ -23,19 +24,15 @@ namespace Recuzaehlen
             }
             else if (zahl == 0)
             {
-                altzahl = zahl;
                 zahl++;
                 repeater--;
-                zahl = rezaehlen(repeater, zahl, altzahl);
+                zahl = rezaehlen(repeater, zahl);
 
             }
-            else 
+            else //if(zahl == )
             {
-                
-                zahl = zahl + altzahl;
-                altzahl = zahl - altzahl;
-                repeater--;
-                zahl = rezaehlen(repeater, zahl, altzahl);
+                zahl = zahl + rezaehlen(--repeater,0);
+                zahl = rezaehlen(repeater, zahl);
 
             }
             return zahl;
