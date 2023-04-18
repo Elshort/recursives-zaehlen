@@ -10,12 +10,12 @@ namespace Recuzaehlen
         { 
             
 
-            Console.WriteLine(rezaehlen(20,0));
+            Console.WriteLine(rezaehlen(10));
 
             
         }
 
-        static long rezaehlen(int repeater, long zahl)
+        /*static long rezaehlen(int repeater, long zahl)
         {
             if (repeater == 0)
             {
@@ -37,7 +37,18 @@ namespace Recuzaehlen
             }
             return zahl;
 
-        }
+        }*/
+        public static int rezaehlen(int position) {
+
+    if(position == 0) {
+        return 1;
+    }
+    if(position == 1) {
+        return 1;
+    } else {
+        return rezaehlen(position - 2) + rezaehlen(position - 1);
+    }
+}
     }
 }
 
