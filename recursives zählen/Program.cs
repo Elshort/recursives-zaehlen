@@ -7,10 +7,10 @@ namespace Recuzaehlen
     {
 
         static void Main()
-        { 
-            
-
-            Console.WriteLine(rezaehlen(10));
+        {
+            Console.WriteLine("bitte Position eingeben");
+            int position = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(rezaehlen(position - 1));
 
             
         }
