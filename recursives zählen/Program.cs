@@ -14,7 +14,7 @@ namespace Recuzaehlen
 
             
         }
-
+        // Alte Funktion mit zwei Variablen.
         /*static long rezaehlen(int repeater, long zahl)
         {
             if (repeater == 0)
@@ -40,15 +40,32 @@ namespace Recuzaehlen
         }*/
         public static int rezaehlen(int position) {
 
-    if(position == 0) {
-        return 1;
-    }
-    if(position == 1) {
-        return 1;
-    } else {
-        return rezaehlen(position - 2) + rezaehlen(position - 1);
-    }
-}
+            if (position <= 0)
+
+            {
+
+            return 1;
+
+            }
+
+            if (position == 0) {
+
+            return 1;
+
+            }
+
+            if(position == 1) {
+
+            return 2;
+
+            }
+            
+            else {
+
+            return rezaehlen(position - 2) + rezaehlen(position - 1);
+
+            }
+        }
     }
 }
 
