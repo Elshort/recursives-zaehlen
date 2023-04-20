@@ -6,11 +6,21 @@ namespace Recuzaehlen
     class programm
     {
 
-        static void Main()
+         static void Main()
         {
             Console.WriteLine("bitte Position eingeben");
             int position = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(rezaehlen(position - 1));
+            if (position == 0)
+            {
+
+                Console.WriteLine("0");
+            }
+            else
+            {
+
+                Console.WriteLine(rezaehlen(position - 1));
+
+            }        
 
             
         }
@@ -40,6 +50,7 @@ namespace Recuzaehlen
         }*/
         public static int rezaehlen(int position) {
 
+
             if (position <= 0)
 
             {
@@ -50,7 +61,7 @@ namespace Recuzaehlen
 
             if (position == 0) {
 
-            return 1;
+            return 1; 
 
             }
 
