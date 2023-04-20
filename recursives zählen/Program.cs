@@ -56,7 +56,7 @@ namespace Recuzaehlen
 
             if(position == 1) {
 
-            return 2;
+            return 1;
 
             }
             
