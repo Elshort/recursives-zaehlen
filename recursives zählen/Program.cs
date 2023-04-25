@@ -7,23 +7,13 @@ namespace Recuzaehlen
     {
 
          static void Main()
-        {
+         {
             Console.WriteLine("bitte Position eingeben");
             int position = Convert.ToInt32(Console.ReadLine());
-            if (position == 0)
-            {
-
-                Console.WriteLine("0");
-            }
-            else
-            {
-
-                Console.WriteLine(rezaehlen(position - 1));
-
-            }        
+            Console.WriteLine(rezaehlen(position));       
 
             
-        }
+         }
         // Alte Funktion mit zwei Variablen.
         /*static long rezaehlen(int repeater, long zahl)
         {
@@ -55,13 +45,7 @@ namespace Recuzaehlen
 
             {
 
-            return 1;
-
-            }
-
-            if (position == 0) {
-
-            return 1; 
+            return 0;
 
             }
 
